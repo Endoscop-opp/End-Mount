@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восхождение на Эльбрус</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/ac/d5/15/acd515aca8d81ba1cf86e78c8768414e.jpg" alt="" class="head">
+    <h1>Восхождение на Эльбрус</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Приглашаем вас в уникальное путешествие – незабываемый туристический поход на Эльбрус! Это не просто восхождение, а возможность испытать себя, окунуться в мир величественных гор Кавказа и насладиться красотой нетронутой природы. Наш поход разработан специально для любителей активного отдыха, желающих расширить границы своих возможностей и получить новые впечатления. Мы гарантируем профессиональную организацию, опытных инструкторов и безопасный маршрут, позволяющий вам в полной мере насладиться покорением вершины. Помимо физических испытаний и живописных пейзажей, вас ждет теплая атмосфера дружелюбия и взаимопомощи в группе единомышленников. Вечерами, у костра, мы будем делиться впечатлениями, рассказывать истории и наслаждаться звездным небом над головой. Это шанс не только проверить свою выносливость, но и обрести новых друзей, а также получить незабываемые эмоции от покорения Эльбруса, навсегда оставившие яркий след в вашей жизни.</p>
+<h3>Уровень сложности: 5/10</h3>
+<h4>Остались вопросы?</h4>
+<p class="contact">Обратитесь в службу поддержки или позвоните по официальному номеру телефона, чтобы связаться с администраторами, они ответят на все ваши вопросы.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Программы тура</h3>
+<ul><li>Треккинг к водопаду</li>
+    <li>Рассказ историй</li>
+    <li>Посещение горного озера</li>
+    <li>Спуск в пещеру</li>
+    <li>Посещение старинного городского села</li>
+    <li>Фотосессия</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://avatars.mds.yandex.net/i?id=bdfe0fa675f4752f2286804788db028c_l-5265720-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/get-mpic/2017118/img_id5724165431522473666.jpeg/orig" alt="" class="slide">
+           <img src="https://cdn1.ozone.ru/s3/multimedia-i/6031503798.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=3f2aab4121fc215b6fbea74e4878350d_l-5235701-images-thumbs&n=13" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

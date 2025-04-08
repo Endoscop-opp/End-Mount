@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поднятие на Гималаи</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=a76736c746c31d5ec8928d771146db41-4911453-images-thumbs&n=13" alt="" class="head">
+    <h1>Поднятие на Гималаи</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Отправляйтесь в увлекательное путешествие в величественные Гималаи, где заснеженные вершины упираются в небо, а древние культуры хранят свои тайны. Этот поход - не просто физическое испытание, но и погружение в мир духовности, красоты и нетронутой природы. Прогуляйтесь по тропам, проложенным веками, ощутите величие высоты в восемь тысяч метров, вдохните чистейший горный воздух и познакомьтесь с самобытным образом жизни местных жителей, живущих в гармонии с суровым климатом.
+    Вас ждут живописные долины, усеянные яркими цветами, горные реки, текущие с ледников, буддийские монастыри, хранящие мудрость веков, и невероятные панорамы, от которых захватывает дух. Преодолейте себя, почувствуйте единение с природой и откройте для себя новые перспективы, совершив восхождение на одну из самых впечатляющих горных систем в мире. Этот поход станет незабываемым приключением, которое изменит вашу жизнь и подарит вам воспоминания, которые будут согревать вас долгие годы.</p>
+<h3>Уровень сложности: 8/10</h3>
+<h4>Остались вопросы?</h4>
+<p class="contact">Обратитесь в службу поддержки или позвоните по официальному номеру телефона, чтобы связаться с администраторами, они ответят на все ваши вопросы.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Программы тура</h3>
+<ul><li>Рыбалка в горной реке или зере</li>
+    <li>Поездка на эндуро</li>
+    <li>Посещение старинного села</li>
+    <li>Катание на горных велосипедах (маунтинбайк)</li>
+    <li>Фотосессия</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://avatars.mds.yandex.net/i?id=f32882572a2235f7e5c484aea11f61d5_l-10023438-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=0666a3ec57ef7009cb22bcea62f28a94_l-10639796-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/3f/e7/f6/3fe7f61c4a4c952a60e806e914e59bdb.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=360715c12ceae90610bb04bfe6d9c55c_l-12715359-images-thumbs&n=13" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

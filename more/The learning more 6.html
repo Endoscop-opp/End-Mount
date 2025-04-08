@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Казахские высоты</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=b3aad57c92af085316da8f4ea4128e95_l-5333776-images-thumbs&n=13" alt="" class="head">
+    <h1>казахские высоты</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Откройте для себя величие Кавказских гор во время незабываемого похода, где суровые вершины встречаются с зеленью альпийских лугов, а древняя история переплетается с современностью. Этот поход - возможность испытать себя, насладиться захватывающими дух пейзажами и познакомиться с богатой культурой и традициями народов, населяющих этот горный регион. Почувствуйте энергию гор, почувствуйте единение с природой и создайте воспоминания, которые будут согревать вас долгие годы.
+
+    Живописные ущелья, кристально чистые реки, могучие водопады и вершины, уходящие в облака, ждут вас. Поднимитесь на смотровые площадки, откуда открывается панорамный вид на Кавказский хребет, отведайте блюда национальной кухни, познакомьтесь с местными обычаями и возьмите с собой частичку этого уникального региона. Этот поход станет настоящим приключением, которое наполнит вашу жизнь новыми впечатлениями и откроет для вас красоту и величие Кавказских гор.</p>
+<h3>Уровень сложности: 2/10</h3>
+<h4>Еще остались вопросы?</h4>
+<p class="contact">Обратитесь в службу поддержки или позвоните по официальному номеру телефона, чтобы связаться с администраторами, они ответят на все ваши вопросы.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Программы тура</h3>
+<ul><li>Треккинг в Иле-Алатауском национальном парке</li>
+    <li>Посещение Чарынского каньона</li>
+    <li>Посещение Тургеньского ущелья</li>
+    <li>Изучение ледников</li>
+    <li>Наблюдение за птицами</li>
+    <li>Посещение минеральных источников</li>
+    <li>Посещение казахского этнографического аула</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://avatars.mds.yandex.net/i?id=1e1c27ddb7a36855cfd6fca98b415c06_l-4502399-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/b5/1a/01/b51a01857e03740ea46557d83baef083.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/get-mpic/4947485/2a0000018fcfd0cea6fd4eeec8325b9bcef3/orig" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=feda74a0d1bb5223495a4be73c3ff7dc_l-7065781-images-thumbs&n=13" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

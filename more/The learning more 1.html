@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечная Камчатка</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=1a37415d005b217e2e368d58b1d4a7be_l-5288161-images-thumbs&n=13" alt="" class="head">
+    <h1>Солнечная камчатка</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Приглашаем вас в захватывающее путешествие по Камчатке, земле, где первозданная дикая природа встречается с мощью геологических процессов. Этот большой поход — не просто треккинг, это глубокое погружение в мир вулканов, гейзеров, медведей и невероятных ландшафтов. Откройте для себя неизведанную красоту Дальнего Востока, почувствуйте себя частью стихии и найдите новые грани себя вдали от цивилизации. Что вас ждет?
+
+    Покорение вулканических гигантов: Поднимитесь по склонам действующих и потухших вулканов, почувствуйте жар земных недр под ногами и насладитесь захватывающими панорамами, простирающимися до горизонта. Мы посетим [укажите конкретные вулканы, например, Горелый, Мутновский, Авачинский], каждый из которых уникален своей формой, активностью и окружающим ландшафтом. Загляните в кратеры, полные бурлящей лавы, или дымящиеся фумаролы — это зрелище останется с вами навсегда.</p>
+<h3>Уровень сложности: 7/10</h3>
+<h4>Остались вопросы?</h4>
+<p class="contact">Обратитесь в службу поддержки, или позвоните по официальному номеру телефона, чтобы связаться с администраторами, они ответят на все ваши вопросы.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Программы тура</h3>
+<ul><li>Картинг</li>
+    <li>Посещение интересных мест с экскурсоводом</li>
+    <li>Посещение ботанического сада</li>
+    <li>Пейнтбол или лазертаг</li>
+    <li>Шашлык у костра на высоте</li>
+    <li>Разнообразные квесты</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://i.pinimg.com/originals/ca/6d/f8/ca6df8e9569e485873fb1e4e270c3869.jpg" alt="" class="slide">
+           <img src="https://cs14.pikabu.ru/post_img/2023/08/07/6/og_og_169139711222608531.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/get-mpic/4219828/img_id3104677909391004070.jpeg/orig" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=dd5b8579646d274276830b40e4ace779_l-5210229-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/60/c6/e9/60c6e926424f506a0df7f75e23b61d77.jpg" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

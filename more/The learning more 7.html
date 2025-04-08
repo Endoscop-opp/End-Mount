@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арабскте пески</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/c1/fa/3a/c1fa3ad2d17f7371d4ee37934b3d3b36.jpg" alt="" class="head">
+    <h1>Арабские пески</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Окунитесь в мистическую красоту Арабских гор, где древние петроглифы рассказывают истории тысячелетий, а суровые пейзажи скрывают оазисы жизни. Этот поход - путешествие в мир безмолвных вершин, скалистых долин и захватывающих закатов, которые окрашивают скалы в огненные цвета. Откройте для себя скрытые сокровища Аравийского полуострова, где история и природа сливаются воедино, предлагая уникальные и незабываемые впечатления.
+
+    Величественные горные хребты, таинственные каньоны, древние руины и ночное небо, усыпанное миллионами звезд, ждут вас. Ощутите тишину и умиротворение этих мест, познакомьтесь с культурой бедуинов и их традициями и найдите новые силы для покорения вершин Арабских гор. Этот поход - возможность увидеть мир с другой точки зрения, открыть для себя неизведанные грани красоты и почувствовать связь с древней землей.</p>
+<h3>Уровень сложности: 1/10</h3>
+<h4>Еще остались вопросы?</h4>
+<p class="contact">Обратитесь в службу поддержки или позвоните по официальному номеру телефона, чтобы связаться с администраторами, они ответят на все ваши вопросы.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Программы тура</h3>
+<ul><li>Джип-сафари по горным дорогам</li>
+    <li>Фото-тур</li>
+    <li>Ночевка в палатках</li>
+    <li>Наблюдение за звездами</li>
+    <li>Вечер у костра</li>
+    <li>Снятие фильма о туре</li>
+    <li>Йога или медитация на природе</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://i.pinimg.com/originals/ca/6e/3f/ca6e3f12cb8e6ab433c146a9a515707c.jpg" alt="" class="slide">
+           <img src="https://tovia.ru/upload/iblock/762/7627fcf2f48061a3fcb6fa6fd544bff5.jpg" alt="" class="slide">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Oman-Wadi-Shab-34.jpg" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/40/d9/7d/40d97d5033f8d37c64e7e9141d6a53f4.jpg" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

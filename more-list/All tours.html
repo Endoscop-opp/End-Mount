@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все туры</title>
+    <link rel="stylesheet" href="../Style/Style-All tours.css">
+</head>
+<body>
+    <div class="div-hd"><h1 id="art8">Все туры</h1></div>
+    <aside class="aska">
+<h3>Перемотать на тур</h3>
+<hr>
+<ul>
+<li><a href="#art8">Все туры</a></li>
+<li><a href="#art0">Алтайские горы</a></li>
+<li><a href="#art1">Солнечная Камчатка</a></li>
+<li><a href="#art2">Восхождение на Эльбрус</a></li>
+<li><a href="#art3">Поднятие на Гималаи</a></li>
+<li><a href="#art4">Великий Дагестан</a></li>
+<li><a href="#art5">Горный король: Эверест</a></li>
+<li><a href="#art6">Казахские высоты</a></li>
+<li><a href="#art7">Арабскте Пески</a></li>
+</ul>
+    </aside>
+<div class="linear">
+<div class="sca">
+
+    <div class="dropdown">
+        <button class="dropdown-button">Find a tour</button>
+        <div class="dropdown-content">
+          <a href="#art8">Все туры</a>
+          <a href="#art0">Алтайские горы</a>
+          <a href="#art1">Солнечная Камчатка</a>
+          <a href="#art2">Восхождение на Эльбрус</a>
+          <a href="#art3">Поднятие на Гималаи</a>
+          <a href="#art4">Великий Дагестан</a>
+          <a href="#art5">Горный король: Эверест</a>
+          <a href="#art6">Казахские высоты</a>
+          <a href="#art7">Арабские Пески</a>
+
+        </div>
+      </div>
+</div>
+
+    <a href="../more/The learning more.html"><div class="artic artic0"><h2 class="maunt" id="art0">Алтайские Горы</h2>
+       </div></a>
+
+        <a href="../more/The learning more 1.html"><div class="artic artic1"><h2 class="maunt" id="art1">Солнечная Камчатка</h2>
+           </div></a>
+
+
+            <a href="../more/The learning more 2.html"><div class="artic artic2"><h2 class="maunt1" id="art2">Восхождение на Эльбрус</h2>
+               </div></a>
+
+
+                <a href="../more/The learning more 3.html"><div class="artic artic3"><h2 class="maunt1" id="art3">Поднятие на Гималаи</h2>
+                  </div></a>
+
+
+                    <a href="../more/The learning more 4.html"><div class="artic artic4"><h2 class="maunt" id="art4">Великий Дагестан</h2>
+                        </div></a>
+
+
+                        <a href="../more/The learning more 5.html"><div class="artic artic5"><h2 class="maunt" id="art5">Горный король: Эверест</h2>
+                           </div></a>
+
+
+                            <a href="../more/The learning more 6.html"><div class="artic artic6"><h2 class="maunt1" id="art6">Казахские высоты</h2>
+                             </div></a>
+
+
+                                <a href="../more/The learning more 7.html"><div class="artic artic7"><h2 class="maunt" id="art7">Арабские пески</h2>
+                                    </div></a>
+
+
+                                
+                                </div>
+                                <script>
+                                    const dropdownButtons = document.querySelectorAll('.dropdown-button');
+                                
+                                    dropdownButtons.forEach(button => {
+                                      button.addEventListener('click', function() {
+                                        // Find the parent dropdown element
+                                        const dropdown = this.parentNode;
+                                        dropdown.classList.toggle('active');
+                                
+                                        // Close other dropdowns if any
+                                        document.querySelectorAll('.dropdown').forEach(otherDropdown => {
+                                          if (otherDropdown !== dropdown) {
+                                            otherDropdown.classList.remove('active');
+                                          }
+                                        });
+                                      });
+                                    });
+                                
+                                    // Close dropdown if clicked outside
+                                    document.addEventListener('click', (event) => {
+                                        const dropdowns = document.querySelectorAll('.dropdown');
+                                
+                                        dropdowns.forEach(dropdown => {
+                                            if (!dropdown.contains(event.target)) {
+                                                dropdown.classList.remove('active');
+                                            }
+                                        });
+                                    });
+                                  </script>
+</body>
+</html>
